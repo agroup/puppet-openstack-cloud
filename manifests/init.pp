@@ -100,12 +100,6 @@ This node is under the control of Puppet ${::puppetversion}.
     enable => true
   }
 
-  if $::osfamily == 'RedHat' and $rhn_registration {
-    create_resources('rhn_register', {
-      "rhn-${::hostname}" => $rhn_registration
-    } )
-  }
-
   if $manage_firewall {
 
     # Only purges IPv4 rules
