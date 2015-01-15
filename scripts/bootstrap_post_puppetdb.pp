@@ -25,6 +25,12 @@ class { 'cloud::install::puppetmaster' :
       'value'   => '10m'
     },
   },
+  master_configuration               => {
+    'main-dummy' => {
+      'setting' => 'dummy',
+      'value'   => '1'
+    },
+  },
   puppetmaster_vhost_configuration => {
     'puppetmasterd' => {
       'docroot'              => '/usr/share/puppet/rack/puppetmasterd/public',
